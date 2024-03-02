@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 6</title>
+    <!-- DaisyUI + Tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font: mulish+ inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <style>
+      .text1 {
+        font-family: "Mulish", sans-serif;
+      }
+      .text2 {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="mx-4 lg:mx-20">
+      <!-- navbar start -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="gap-y-4 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li title="Home">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame.png" alt=""
+                /></a>
+              </li>
+              <li title="Edit">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame (1).png" alt=""
+                /></a>
+              </li>
+              <li title="Add Account">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame (2).png" alt=""
+                /></a>
+              </li>
+              <li title="Flag">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame (3).png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl"
+            ><img src="./images/logo.png" alt="logo"
+          /></a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-center hidden md:flex">
+            <ul class="menu menu-horizontal px-1 flex gap-x-6">
+              <li title="Home">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame.png" alt=""
+                /></a>
+              </li>
+              <li title="Edit">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame (1).png" alt=""
+                /></a>
+              </li>
+              <li title="Add Account">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame (2).png" alt=""
+                /></a>
+              </li>
+              <li title="Flag">
+                <a class="btn btn-circle"
+                  ><img src="./images/Frame (3).png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <a
+            class="btn ml-4 bg-[#797DFC] rounded-[50px] text-white hover:text-[#797DFC] hover:bg-white"
+            >Sign In</a
+          >
+        </div>
+      </div>
+      <!-- navbar stop -->
+
+      <!-- banner start -->
+      <section
+        class="bg-[#12132D] rounded-3xl h-[550px] bg-[url('/images/bgbanner.png')] bg-bottom bg-no-repeat bg-cover"
+      >
+    <div class="container flex flex-col lg:flex-row justify-between m-12">
+        <div>
+            <h3>Welcome to the <br> <span>ReTro</span> Forum</h3>
+            <p>Share your favorite opinion and win and wp forum coffee mug!</p>
+            <div>
+                <label class="input input-bordered flex items-center gap-2">
+                    <input type="text" class="grow" placeholder="Search" />
+                    <button class="btn btn-xs sm:btn-sm md:btn-md">Search</button>
+                  </label>
+            </div>
+        </div>
+        <div class="bg-white h-72">
+            <div class="container flex">
+                <p>Registered Users</p>
+                <p>01</p>
+            </div>
+            <div class="container flex">
+                <p>Forum</p>
+                <p>05</p>
+            </div>
+            <div class="container flex">
+                <p>Topic</p>
+                <p>01</p>
+            </div>
+            <div class="container flex">
+                <p>Replies</p>
+                <p>01</p>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+      <!-- banner stop -->
+    </header>
+
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

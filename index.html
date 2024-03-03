@@ -140,14 +140,14 @@
             </p>
             <div class="lg:pr-12">
               <label
-                class="input input-bordered flex items-center gap-2 h-10 lg:h-16 rounded-[50px]"
+                class="input input-bordered flex items-center gap-2 h-10 lg:h-14 rounded-[50px]"
               >
-                <input
+                <input id="input-field"
                   type="text"
                   class="grow text1 font-medium text-[#03071280]"
                   placeholder="Search here anything"
                 />
-                <button
+                <button onclick="handleSearch()" id="search-btn"
                   class="btn btn-sm lg:btn-md text1 text-base lg:text-xl font-bold text-white bg-[#797DFC] rounded-[50px]"
                 >
                   Search
@@ -207,9 +207,15 @@
           </p>
         </div>
 
+        <div id="spinner-container" class="flex justify-center hidden">
+          <span class="loading loading-spinner loading-lg text-emerald-500"></span>
+        </div>
         <div class="container grid grid-cols-1 lg:grid-cols-12 gap-4">
           <!-- left side -->
           <div id="post-container" class="lg:col-span-8">
+            <div id="spinnerContainer" class="flex justify-center hidden">
+              <span class="loading loading-spinner loading-lg"></span>
+            </div>
             <!-- <div
             class="container p-10 bg-[#F3F3F5] hover:bg-[#797DFC1A] rounded-3xl flex"
           >
@@ -272,7 +278,7 @@
                 <div class="flex w-3/5 justify-end gap-1">
                   <img src="./images/tik.png" alt="" />
                   <h3 class="text2 text-[#12132D99]">
-                    Mark as read <span id="mark-count">(0)</span>
+                    Mark as read <span id="mark-count">0</span>
                   </h3>
                 </div>
               </div>
@@ -334,8 +340,8 @@
           </p>
         </div>
 
-        <div class="container flex flex-col lg:flex-row gap-4">
-            <div class="container flex flex-col lg:flex-row border-[1px] border-[#12132D26] rounded-3xl p-6">
+        <div id="latest-post-container" class="container flex flex-col lg:flex-row gap-4">
+            <!-- <div class="container flex flex-col lg:flex-row border-[1px] border-[#12132D26] rounded-3xl p-6">
                 <div class="container">
                   <div class="flex justify-center"><img src="./images/wRectangle 4.png" alt="" srcset="" /></div>
       
@@ -427,7 +433,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
         </div>
       </section>
       <!-- latest post stop -->
@@ -446,6 +452,7 @@
             <p class="text1 text-[#12132D80] font-light">2017, All Rights Reserved.</p>
         </div>
     </footer>
+
 
     <script src="./scripts/index.js"></script>
   </body>

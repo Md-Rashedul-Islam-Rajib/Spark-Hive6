@@ -12,7 +12,7 @@ const loadAllpost = async (inputText = '') => {
 loadAllpost();
 
 
-
+// display all posts
 const displayPost = (posts) => {
   const postContainer = document.getElementById("post-container");
   postContainer.innerHTML = '';
@@ -83,6 +83,7 @@ const displayPost = (posts) => {
     handleSpinner(false);
 };
 
+// search button
 const handleSearch = () => {
   handleSpinner(true);
   const inputText = document.getElementById('input-field').value.toLowerCase();
@@ -90,6 +91,7 @@ const handleSearch = () => {
 }
 
 
+// loading spinner 
   function handleSpinner(isLoading) {
     const spinnerContainer = document.getElementById('spinner-container');
     if(isLoading){
@@ -103,6 +105,7 @@ const handleSearch = () => {
   }
 
 
+  // load latest posts from api
 const loadLatestPosts = async () => {
   const res = await fetch(
     `https://openapi.programming-hero.com/api/retro-forum/latest-posts`
@@ -113,6 +116,7 @@ const loadLatestPosts = async () => {
 loadLatestPosts()
 
 
+// displaying latest posts
 const displayLatestPosts = (latestPosts) => {
   const latestPostContainer = document.getElementById('latest-post-container');
   latestPosts.forEach((latestPost) => {
@@ -154,6 +158,7 @@ const displayLatestPosts = (latestPosts) => {
 }
 
 
+// message button : add count and data title and view-count to sidebar
 let viewCount = 0;
 const markRead = (count,title) => {
   // console.log(count,id)
@@ -177,33 +182,3 @@ viewCount++;
   `;
   markContainer.appendChild(markDiv);
 }
-
-
-
-
-
-// let count = 0;
-// const markRead = (posts) => {
-//   const markCount = document.getElementById('mark-count');
-//   markCount.innerText = count++;
-//   const markContainer = document.getElementById('mark-container');
-
-//   posts.forEach((post) =>{
-  
-//     const markDiv = document.createElement("div");
-//   markDiv.classList = "container flex bg-white mt-4 rounded-2xl p-4";
-//   markDiv.innerHTML = `
-//   <div class="w-4/5">
-//                     <h3 class="text1 text-[#12132D] font-semibold">
-//                     ${post.title}
-//                     </h3>
-//                   </div>
-//                   <div class="container flex w-1/5 justify-end items-center">
-//                     <img src="./images/tabler-icon-eye.png" alt="" />
-//                     <p class="text1 text-[#12132D99]">${post.view_count}</p>
-//                   </div>
-//   `;
-//   markContainer.appendChild(markDiv);
-//   });
-
-// }

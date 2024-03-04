@@ -8,7 +8,6 @@ const loadAllpost = async (inputText = '') => {
   const posts = data.posts;
   globaldata.push(posts);
   displayPost(posts);
-  markRead(posts);
 };
 loadAllpost();
 
@@ -158,9 +157,9 @@ const displayLatestPosts = (latestPosts) => {
 let viewCount = 0;
 const markRead = (count,title) => {
   // console.log(count,id)
-
+viewCount++;
   const markCount = document.getElementById('mark-count');
-  markCount.innerText = viewCount++;
+  markCount.innerText = viewCount;
 
   const markContainer = document.getElementById('mark-container');
   const markDiv = document.createElement("div");

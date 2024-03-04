@@ -71,7 +71,7 @@ const displayPost = (posts) => {
                       <p>${post.posted_time}</p>
                     </div>
                   </div>
-                  <div onclick="markRead(${post.view_count},${post.id})">
+                  <div onclick="markRead(${post.view_count},'${post.title}')">
                     <img src="./images/email 1.png" alt="" />
                   </div>
                 </div>
@@ -90,12 +90,15 @@ const handleSearch = () => {
   loadAllpost(inputText);
 }
 
-  const handleSpinner = (isLoading) => {
+
+  function handleSpinner(isLoading) {
     const spinnerContainer = document.getElementById('spinner-container');
     if(isLoading){
       spinnerContainer.classList.remove('hidden');
     }else{
-      spinnerContainer.classList.add('hidden');
+      setTimeout(() =>{
+        spinnerContainer.classList.add('hidden');
+      },2000)
   
     }
   }
@@ -152,19 +155,20 @@ const displayLatestPosts = (latestPosts) => {
 }
 
 
-let count = 0;
-const markRead = (count,id) => {
+let viewCount = 0;
+const markRead = (count,title) => {
   // console.log(count,id)
 
   const markCount = document.getElementById('mark-count');
-  markCount.innerText = count++;
+  markCount.innerText = viewCount++;
+
   const markContainer = document.getElementById('mark-container');
   const markDiv = document.createElement("div");
   markDiv.classList = "container flex bg-white mt-4 rounded-2xl p-4";
   markDiv.innerHTML = `
   <div class="w-4/5">
                     <h3 class="text1 text-[#12132D] font-semibold">
-                    ${id}
+                    ${title}
                     </h3>
                   </div>
                   <div class="container flex w-1/5 justify-end items-center">
